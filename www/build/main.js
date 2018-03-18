@@ -22,11 +22,13 @@ webpackEmptyAsyncContext.id = 108;
 
 var map = {
 	"../pages/bin-to-hex/bin-to-hex.module": [
-		275,
-		0
+		275
 	],
 	"../pages/converter/converter.module": [
 		150
+	],
+	"../pages/hex-to-bin/hex-to-bin.module": [
+		277
 	],
 	"../pages/intro/intro.module": [
 		152
@@ -93,6 +95,8 @@ var ConverterPageModule = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConverterPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bin_to_hex_bin_to_hex__ = __webpack_require__(276);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hex_to_bin_hex_to_bin__ = __webpack_require__(278);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -104,6 +108,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
 /**
  * Generated class for the ConverterPage page.
  *
@@ -112,19 +118,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  */
 var ConverterPage = /** @class */ (function () {
     function ConverterPage(navCtrl, navParams) {
+        var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.goToBinHex = function () { _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__bin_to_hex_bin_to_hex__["a" /* BinToHexPage */]); };
+        this.goToHexBin = function () { _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__hex_to_bin_hex_to_bin__["a" /* HexToBinPage */]); };
     }
     ConverterPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad ConverterPage');
     };
     ConverterPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-converter',template:/*ion-inline-start:"/home/tharles/projetos/ionic/binhxCalc/src/pages/converter/converter.html"*/'<!--\n  Generated template for the ConverterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Converter</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <button ion-button block class="btn-page-conv">Binary to Hexadecimal</button>\n  <button ion-button block>Hexadecimal to Binary</button>\n\n</ion-content>\n'/*ion-inline-end:"/home/tharles/projetos/ionic/binhxCalc/src/pages/converter/converter.html"*/,
+            selector: 'page-converter',template:/*ion-inline-start:"/home/tharles/projetos/ionic/binhxCalc/src/pages/converter/converter.html"*/'<!--\n  Generated template for the ConverterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Converter</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <button ion-button block class="btn-page-conv" (click)="goToBinHex();">Binary to Hexadecimal</button>\n  <button ion-button block class="btn-page-conv" (click)="goToHexBin();">Hexadecimal to Binary</button>\n\n</ion-content>\n'/*ion-inline-end:"/home/tharles/projetos/ionic/binhxCalc/src/pages/converter/converter.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object])
     ], ConverterPage);
     return ConverterPage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=converter.js.map
@@ -358,12 +368,16 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_intro_intro_module__ = __webpack_require__(152);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_converter_converter_module__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_bin_to_hex_bin_to_hex_module__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_hex_to_bin_hex_to_bin_module__ = __webpack_require__(277);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -390,11 +404,14 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_9__pages_intro_intro_module__["IntroPageModule"],
                 __WEBPACK_IMPORTED_MODULE_10__pages_converter_converter_module__["ConverterPageModule"],
+                __WEBPACK_IMPORTED_MODULE_11__pages_bin_to_hex_bin_to_hex_module__["BinToHexPageModule"],
+                __WEBPACK_IMPORTED_MODULE_12__pages_hex_to_bin_hex_to_bin_module__["HexToBinPageModule"],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/bin-to-hex/bin-to-hex.module#BinToHexPageModule', name: 'BinToHexPage', segment: 'bin-to-hex', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/converter/converter.module#ConverterPageModule', name: 'ConverterPage', segment: 'converter', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/intro/intro.module#IntroPageModule', name: 'IntroPage', segment: 'intro', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/intro/intro.module#IntroPageModule', name: 'IntroPage', segment: 'intro', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/hex-to-bin/hex-to-bin.module#HexToBinPageModule', name: 'HexToBinPage', segment: 'hex-to-bin', priority: 'low', defaultHistory: [] }
                     ]
                 })
             ],
@@ -462,6 +479,172 @@ var MyApp = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 275:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BinToHexPageModule", function() { return BinToHexPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bin_to_hex__ = __webpack_require__(276);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var BinToHexPageModule = /** @class */ (function () {
+    function BinToHexPageModule() {
+    }
+    BinToHexPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__bin_to_hex__["a" /* BinToHexPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__bin_to_hex__["a" /* BinToHexPage */]),
+            ],
+        })
+    ], BinToHexPageModule);
+    return BinToHexPageModule;
+}());
+
+//# sourceMappingURL=bin-to-hex.module.js.map
+
+/***/ }),
+
+/***/ 276:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BinToHexPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the BinToHexPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var BinToHexPage = /** @class */ (function () {
+    function BinToHexPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    BinToHexPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad BinToHexPage');
+    };
+    BinToHexPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-bin-to-hex',template:/*ion-inline-start:"/home/tharles/projetos/ionic/binhxCalc/src/pages/bin-to-hex/bin-to-hex.html"*/'<!--\n  Generated template for the BinToHexPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>BinToHex</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/tharles/projetos/ionic/binhxCalc/src/pages/bin-to-hex/bin-to-hex.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+    ], BinToHexPage);
+    return BinToHexPage;
+}());
+
+//# sourceMappingURL=bin-to-hex.js.map
+
+/***/ }),
+
+/***/ 277:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HexToBinPageModule", function() { return HexToBinPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hex_to_bin__ = __webpack_require__(278);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var HexToBinPageModule = /** @class */ (function () {
+    function HexToBinPageModule() {
+    }
+    HexToBinPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__hex_to_bin__["a" /* HexToBinPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__hex_to_bin__["a" /* HexToBinPage */]),
+            ],
+        })
+    ], HexToBinPageModule);
+    return HexToBinPageModule;
+}());
+
+//# sourceMappingURL=hex-to-bin.module.js.map
+
+/***/ }),
+
+/***/ 278:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HexToBinPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the HexToBinPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var HexToBinPage = /** @class */ (function () {
+    function HexToBinPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    HexToBinPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad HexToBinPage');
+    };
+    HexToBinPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-hex-to-bin',template:/*ion-inline-start:"/home/tharles/projetos/ionic/binhxCalc/src/pages/hex-to-bin/hex-to-bin.html"*/'<!--\n  Generated template for the HexToBinPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>HexToBin</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/tharles/projetos/ionic/binhxCalc/src/pages/hex-to-bin/hex-to-bin.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+    ], HexToBinPage);
+    return HexToBinPage;
+}());
+
+//# sourceMappingURL=hex-to-bin.js.map
 
 /***/ })
 

@@ -11,6 +11,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { IntroPageModule } from "../pages/intro/intro.module";
 import { ConverterPageModule } from "../pages/converter/converter.module";
+import { BinToHexPageModule } from "../pages/bin-to-hex/bin-to-hex.module";
+import { HexToBinPageModule } from "../pages/hex-to-bin/hex-to-bin.module";
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { ConverterPageModule } from "../pages/converter/converter.module";
     BrowserModule,
     IntroPageModule,
     ConverterPageModule,
+    BinToHexPageModule,
+    HexToBinPageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
