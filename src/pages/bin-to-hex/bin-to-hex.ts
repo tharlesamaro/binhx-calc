@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
+
 
 /**
  * Generated class for the BinToHexPage page.
@@ -10,16 +11,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-bin-to-hex',
-  templateUrl: 'bin-to-hex.html',
+    selector: 'page-bin-to-hex',
+    templateUrl: 'bin-to-hex.html',
 })
 export class BinToHexPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+    constructor(public navCtrl: NavController, public navParams: NavParams) {
+    }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad BinToHexPage');
-  }
+    public binaryNumber;
 
+    convertBases = () => {
+        let decimal = parseInt(this.binaryNumber, 2);
+        while(this.binaryNumber == null || this.binaryNumber == "") {return ""};
+        return decimal.toString(16);
+    }
+
+    ionViewDidLoad() {
+        console.log('ionViewDidLoad BinToHexPage');
+    }
 }

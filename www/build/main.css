@@ -25678,8 +25678,16 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+page-bin-to-hex .result h4 {
+  padding-top: 20px;
+}
+
 page-converter .btn-page-conv {
   margin-bottom: 10px;
+}
+
+page-hex-to-bin .result h4 {
+  padding-top: 20px;
 }
 
 page-intro .intro-slide-img {

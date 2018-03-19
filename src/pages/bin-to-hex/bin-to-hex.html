@@ -15,4 +15,21 @@
 
 <ion-content padding>
 
+  <h4>Enter the binary number:</h4>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-input type="number" [(ngModel)]="binaryNumber"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div id="result-bin-to-hex" class="result">
+    <h4>Result:</h4>
+      <p class="result-base"><strong>Binary:</strong> {{ binaryNumber }} </p>
+      <p class="result-base"><strong>Hexadecimal:</strong> {{ convertBases() }} </p>
+  </div>
+
+
 </ion-content>

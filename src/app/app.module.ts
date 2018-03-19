@@ -1,5 +1,6 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from "@angular/forms";
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
@@ -13,6 +14,7 @@ import { IntroPageModule } from "../pages/intro/intro.module";
 import { ConverterPageModule } from "../pages/converter/converter.module";
 import { BinToHexPageModule } from "../pages/bin-to-hex/bin-to-hex.module";
 import { HexToBinPageModule } from "../pages/hex-to-bin/hex-to-bin.module";
+import { Keyboard } from '@ionic-native/keyboard';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { HexToBinPageModule } from "../pages/hex-to-bin/hex-to-bin.module";
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     IntroPageModule,
     ConverterPageModule,
     BinToHexPageModule,
@@ -39,6 +42,7 @@ import { HexToBinPageModule } from "../pages/hex-to-bin/hex-to-bin.module";
   providers: [
     StatusBar,
     SplashScreen,
+    Keyboard,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

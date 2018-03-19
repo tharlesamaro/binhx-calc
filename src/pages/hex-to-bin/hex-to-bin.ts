@@ -18,6 +18,14 @@ export class HexToBinPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  public hexadecimalNumber;
+
+  convertBases = () => {
+    let decimal = parseInt(this.hexadecimalNumber, 16);
+    while(this.hexadecimalNumber == null || this.hexadecimalNumber == "") {return ""};
+    return decimal.toString(2);
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad HexToBinPage');
   }
